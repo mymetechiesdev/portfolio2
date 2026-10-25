@@ -1,0 +1,63 @@
+/**
+ * MYME TECHIES — motion
+ * Only transform/opacity are animated. Content is visible by default; hiding
+ * only starts once main.js has run (.js-ready), so nothing is lost if scripts
+ * or animations fail.
+ */
+
+.js-ready .reveal {
+  opacity: 0;
+  translate: 0 22px;
+  transition: opacity 0.8s var(--ease) var(--d, 0ms), translate 0.8s var(--ease) var(--d, 0ms),
+    transform var(--t), box-shadow var(--t), border-color var(--t);
+}
+
+.js-ready .reveal.is-in {
+  opacity: 1;
+  translate: none;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 26px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -14px, 0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-48px, 48px, 0); }
+}
+
+.hero-anim > * {
+  animation: rise 0.9s var(--ease) both;
+}
+.hero-anim > *:nth-child(1) { animation-delay: 0.05s; }
+.hero-anim > *:nth-child(2) { animation-delay: 0.15s; }
+.hero-anim > *:nth-child(3) { animation-delay: 0.27s; }
+.hero-anim > *:nth-child(4) { animation-delay: 0.38s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js-ready .reveal {
+    opacity: 1 !important;
+    translate: none !important;
+  }
+}

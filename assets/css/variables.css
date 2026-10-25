@@ -1,0 +1,95 @@
+/**
+ * MYME TECHIES — design tokens
+ * Change brand colours, type and spacing here; everything else reads these.
+ */
+
+:root {
+  /* Dark surfaces */
+  --ink: #070c0b;
+  --charcoal: #0b1110;
+  --graphite: #131c1a;
+  --panel: #0f1716;
+
+  /* Brand teal */
+  --teal: #19e6c8;          /* bright, for use on dark */
+  --teal-600: #00c4aa;      /* buttons / fills */
+  --teal-deep: #08806f;     /* readable teal text on light backgrounds */
+  --teal-ink: #04332c;
+
+  /* Light surfaces */
+  --white: #ffffff;
+  --cream: #faf7f0;
+  --beige: #f1e9da;
+  --beige-2: #e8dcc5;
+
+  /* Text */
+  --text: #131917;
+  --text-soft: #54605b;
+  --text-on-dark: #f3f7f6;
+  --text-on-dark-soft: #b5c4bf;
+
+  /* Lines */
+  --line: #e3dccd;
+  --line-strong: #cfc6b2;
+  --line-dark: rgba(255, 255, 255, 0.1);
+  --line-teal: rgba(25, 230, 200, 0.28);
+
+  /* Type */
+  --font-heading: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: clamp(1.25rem, 1.05rem + 0.8vw, 1.6rem);
+  --fs-2xl: clamp(1.75rem, 1.25rem + 1.6vw, 2.5rem);
+  --fs-3xl: clamp(2.05rem, 1.4rem + 2.2vw, 3.3rem);
+  --fs-hero: clamp(2.5rem, 1.35rem + 3.9vw, 4.9rem);
+
+  --lh-tight: 1.06;
+  --lh-snug: 1.28;
+  --lh-body: 1.65;
+  --track-tight: -0.03em;
+  --track-wide: 0.18em;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+  --space-9: 7.5rem;
+
+  --wrap: 1200px;
+  --wrap-wide: 1320px;
+  --gutter: clamp(1.15rem, 0.6rem + 2.2vw, 2.5rem);
+  --nav-offset: 5.5rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 180ms var(--ease);
+  --t: 320ms var(--ease);
+  --t-slow: 700ms var(--ease);
+
+  --z-header: 1000;
+  --z-overlay: 1200;
+
+  --shadow-card: 0 1px 0 rgba(19, 25, 23, 0.04), 0 18px 40px -22px rgba(40, 32, 12, 0.28);
+  --shadow-lift: 0 28px 60px -26px rgba(40, 32, 12, 0.38);
+  --glow-teal: 0 0 70px rgba(25, 230, 200, 0.28);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-offset: 5rem;
+    --space-8: 3.75rem;
+    --space-9: 5rem;
+  }
+}
